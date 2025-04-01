@@ -63,3 +63,5 @@ group :test do
 end
 
 gem "bcrypt", "~> 3.1"
+
+gem "vite_rails", "~> 3.0"

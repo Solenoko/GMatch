@@ -19,8 +19,9 @@
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
-    <%= javascript_include_tag "application", "defer": true %>
+
+    <%= vite_client_tag %> <!-- Vite Client Tag for hot-reloading -->
+    <%= vite_javascript_tag 'application' %> <!-- Vite JS Tag for the app -->
   </head>
 
   <body>

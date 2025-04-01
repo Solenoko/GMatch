@@ -2,13 +2,21 @@
   "name": "app",
   "private": true,
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.13",
+    "@popperjs/core": "^2.11.8",
+    "@vitejs/plugin-vue": "^5.2.3",
     "bootstrap": "^5.3.3",
     "typescript": "^5.8.2",
+    "vite": "^5.0.0",
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "vite-plugin-ruby": "^5.1.0"
   }
 }
