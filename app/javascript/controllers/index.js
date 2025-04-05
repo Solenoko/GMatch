@@ -5,4 +5,7 @@
 import { application } from "./application"
 
 import HelloController from "./hello_controller"
+import ReadMoreController from "./read_more_controller"
+
 application.register("hello", HelloController)
+application.register("read-more", ReadMoreController)

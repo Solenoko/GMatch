@@ -1,7 +1,29 @@
-<h1>All Games</h1>
+<div class="container mt-5 pt-5">
+  <h1 class="text-center mb-4">All Games</h1>
 
-<ul>
-  <% @games.each do |game| %>
-    <li><%= game.name %></li>>
-  <% end %>
-</ul>
+  <div class="row justify-content-center">
+    <% @games.each do |game| %>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+        <div class="card game-category-card text-center">
+          <div class="card-body">
+            <h5 class="card-title"><%= game.title %></h5>
+            <p class="card-text text-white mb-1"><strong>Genre:</strong> <%= game.genre %></p>
+            <div class="card-text text-white" data-controller="read-more">
+              <span data-read-more-target="short">
+                <%= truncate(game.description, length: 15, separator: ' ') %>
+              </span>
+
+              <span data-read-more-target="full" style="display: none;">
+                <%= game.description %>
+              </span>
+
+              <% if game.description.length > 15 %>
+                <a href="#" data-action="click->read-more#toggle" class="read-more-link">Read more</a>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
