@@ -1,23 +1,23 @@
-<div class="container mt-5 pt-5">
+<div class="container mt-5 pt-5" data-controller="show-more" data-show-more-limit-value="8">
   <h1 class="text-center mb-4">All Games</h1>
 
-  <div class="row justify-content-center">
-    <% @games.each do |game| %>
-      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center">
+  <div class="row justify-content-center" data-show-more-target="list">
+    <% @games.each_with_index do |game, index| %>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center"
+          data-show-more-target="item"
+          data-index="<%= index %>">
         <div class="card game-category-card text-center">
           <div class="card-body">
             <h5 class="card-title"><%= game.title %></h5>
             <p class="card-text text-white mb-1"><strong>Genre:</strong> <%= game.genre %></p>
             <div class="card-text text-white" data-controller="read-more">
               <span data-read-more-target="short">
-                <%= truncate(game.description, length: 15, separator: ' ') %>
+                <%= truncate(game.description, length: 50, separator: ' ') %>
               </span>
-
               <span data-read-more-target="full" style="display: none;">
                 <%= game.description %>
               </span>
-
-              <% if game.description.length > 15 %>
+              <% if game.description.length > 50 %>
                 <a href="#" data-action="click->read-more#toggle" class="read-more-link">Read more</a>
               <% end %>
             </div>
@@ -26,4 +26,18 @@
       </div>
     <% end %>
   </div>
-</div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary"
+            data-action="click->show-more#showAll"
+            data-show-more-target="showMoreButton">
+      Show More
+    </button>
+
+    <button class="btn btn-secondary"
+            data-action="click->show-more#showLess"
+            data-show-more-target="showLessButton"
+            style="display: none;">
+      Show Less
+    </button>
+  </div>

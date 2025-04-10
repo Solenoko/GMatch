@@ -11,28 +11,53 @@
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
+body {
+  background-color: #121212;
+  color: white;
+}
+
 .game-category-card {
-  border-radius: 1rem;
-  background: #4f7ba7;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  height: 200px;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230, 230, 230);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 250px;
+  background-color: #1f1f1f;
+  color: white;
+  cursor: pointer;
 }
 
 .game-category-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(216, 48, 48, 0.8);
+  border-color: #d83030;
+  animation: borderEffect 0.5s ease-out;
 }
 
-.card-body {
-  padding: 1rem;
+@keyframes borderEffect {
+  0% {
+    border-color: rgb(230, 230, 230);
+  }
+  100% {
+    border-color: #d83030;
+  }
+}
+
+.game-category-card img {
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.game-category-card p {
+  opacity: 0.5;
+  margin: 0;
 }
 
 .card-title {
@@ -49,4 +74,11 @@
 }
 .read-more-link:hover {
   text-decoration: underline;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
