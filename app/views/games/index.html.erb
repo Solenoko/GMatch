@@ -6,7 +6,9 @@
       <div class="col-lg-3 col-md-4 col-sm-6 mb-4 d-flex justify-content-center"
           data-show-more-target="item"
           data-index="<%= index %>">
-        <div class="card game-category-card text-center">
+        <div class="card game-category-card text-center"
+          data-controller="expand-card"
+          data-action="click->expand-card#toggle">
           <div class="card-body">
             <h5 class="card-title"><%= game.title %></h5>
             <p class="card-text text-white mb-1"><strong>Genre:</strong> <%= game.genre %></p>
@@ -18,9 +20,17 @@
                 <%= game.description %>
               </span>
               <% if game.description.length > 50 %>
-                <a href="#" data-action="click->read-more#toggle" class="read-more-link">Read more</a>
+                <a href="#"
+                  data-action="click->read-more#toggle click->expand-card#stopPropagation"
+                  class="read-more-link">Read more</a>
               <% end %>
             </div>
+          </div>
+
+          <div data-expand-card-target="details" class="card-details">
+            <p><strong>Players:</strong> 2-4</p>
+            <p><strong>Platform:</strong> PC, Console</p>
+            <a href="<%= game_path(game) %>" class="btn btn-primary mt-2">Go to the game page</a>
           </div>
         </div>
       </div>
