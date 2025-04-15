@@ -1,0 +1,18 @@
+<div class="game-show-container">
+  <h1 class="game-title"><%= @game.title %></h1>
+
+  <div class="game-banner">
+    <img src="<%= @game.image_url %>" alt="<%= @game.title %> Banner">
+  </div>
+
+  <div class="game-info">
+    <p class="game-description"><%= @game.description %></p>
+    <ul class="game-meta">
+      <li><strong>Genre:</strong> <%= @game.genre %></li>
+      <li><strong>Platform:</strong> <%= @game.platform %></li>
+      <li><strong>Players:</strong> <%= @game.players %></li>
+    </ul>
+
+    <a href="#" class="btn-join-lobby">Join Lobby</a>
+  </div>
+</div>
