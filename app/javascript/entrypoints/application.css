@@ -82,3 +82,54 @@ body {
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
+
+.card-details {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+  padding: 0 15px;
+  color: white;
+}
+
+.card-details.expanded {
+  margin-top: 15px;
+}
+
+.game-category-card {
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.card.game-category-card.expanded-card {
+  z-index: 10;
+  width: 100% !important;
+  max-width: 800px;
+  background-color: #1c1c1c !important;
+  transform: scale(1.05) !important;
+  border: 2px solid;
+  animation: rgb-border-glow 4s linear infinite;
+}
+
+@keyframes rgb-border-glow {
+  0% {
+    border-color: hsl(0, 100%, 50%);
+    box-shadow: 0 0 20px hsl(0, 100%, 50%);
+  }
+  25% {
+    border-color: hsl(120, 100%, 50%);
+    box-shadow: 0 0 20px hsl(120, 100%, 50%);
+  }
+  50% {
+    border-color: hsl(240, 100%, 50%);
+    box-shadow: 0 0 20px hsl(240, 100%, 50%);
+  }
+  75% {
+    border-color: hsl(300, 100%, 50%);
+    box-shadow: 0 0 20px hsl(300, 100%, 50%);
+  }
+  100% {
+    border-color: hsl(360, 100%, 50%);
+    box-shadow: 0 0 20px hsl(360, 100%, 50%);
+  }
+}
