@@ -15,14 +15,29 @@
   font-size: 36px;
   color: #ff0055;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+/* NEW FLEX CONTAINER */
+.game-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.game-banner {
+  flex: 0 0 30%;
 }
 
 .game-banner img {
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 0, 85, 0.4);
-  margin-bottom: 20px;
+}
+
+.game-info {
+  flex: 1;
 }
 
 .game-description {
@@ -62,4 +77,27 @@
   background-color: #ff0055;
   color: #111;
   box-shadow: 0 0 20px rgba(255, 0, 85, 0.8);
+}
+
+.back-button-container {
+  margin-bottom: 20px;
+}
+
+.btn-back {
+  display: inline-block;
+  background-color: transparent;
+  color: #ff0055;
+  border: 2px solid #ff0055;
+  padding: 8px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-back:hover {
+  background-color: #ff0055;
+  color: #111;
+  box-shadow: 0 0 10px rgba(255, 0, 85, 0.6);
 }

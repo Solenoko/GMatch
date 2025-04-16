@@ -67,7 +67,6 @@ games.each do |game_attrs|
     game.description = game_attrs[:description]
     game.platform = game_attrs[:platform]
     game.players = game_attrs[:players]
-    game.image_url = "https://example.com/image.jpg"
   end
 end
 
