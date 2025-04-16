@@ -8,8 +8,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 games = [
-  { title: 'Super Mario Bros', genre: 'Platformer', platform: 'Nintendo', description: 'An iconic platform game featuring Mario and Luigi.', players: 2 },
-  { title: 'Minecraft', genre: 'Sandbox', platform: 'PC, Console, Mobile', description: 'A sandbox game where players can build and explore worlds.', players: 1 },
+  { title: 'Super Mario Bros', genre: 'Platformer', platform: 'Nintendo', description: 'An iconic platform game featuring Mario and Luigi.', players: 2, },
+  { title: 'Minecraft', genre: 'Sandbox', platform: 'PC, Console, Mobile', description: 'A sandbox game where players can build and explore worlds.', players: 1, },
   { title: 'Fortnite', genre: 'Battle Royale', platform: 'PC, Console, Mobile', description: 'A battle royale game with building mechanics and a colorful style.', players: 100 },
   { title: 'Call of Duty', genre: 'Shooter', platform: 'PC, Console', description: 'A first-person shooter game with intense multiplayer action.', players: 12 },
   { title: 'League of Legends', genre: 'MOBA', platform: 'PC', description: 'A popular multiplayer online battle arena game.', players: 10 },
@@ -67,7 +67,6 @@ games.each do |game_attrs|
     game.description = game_attrs[:description]
     game.platform = game_attrs[:platform]
     game.players = game_attrs[:players]
-    game.image_url = "https://example.com/image.jpg"
   end
 end
 
