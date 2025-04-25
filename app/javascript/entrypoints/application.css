@@ -167,13 +167,14 @@ body {
 .container-unique {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .radio-wrapper-unique {
   position: relative;
   height: 38px;
   width: 84px;
-  margin: 3px;
+  margin: 5px;
 }
 
 .radio-wrapper-unique .input-unique {
