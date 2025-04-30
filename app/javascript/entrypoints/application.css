@@ -172,8 +172,8 @@ body {
 
 .radio-wrapper-unique {
   position: relative;
-  height: 38px;
-  width: 84px;
+  height: 48px;
+  width: 140px;
   margin: 5px;
 }
 
@@ -191,7 +191,7 @@ body {
   --primary-unique: #ff184c;
   --shadow-primary-unique: #fded00;
   --color-unique: white;
-  --font-size-unique: 9px;
+  --font-size-unique: 14px;
   --shadow-primary-hue-unique: 180;
   --shadow-secondary-hue-unique: 60;
   --shadow-secondary-unique: hsl(var(--shadow-secondary-hue-unique), 90%, 60%);
@@ -213,7 +213,7 @@ body {
   font-weight: 900;
   width: 100%;
   height: 100%;
-  line-height: 38px;
+  line-height: 48px;
   text-align: center;
   transition: background 0.2s, 0.3s;
 }
@@ -225,7 +225,7 @@ body {
 
 .input-unique:hover + .btn-unique {
   --primary-unique: #cc133c;
-  --font-size-unique: 11px;
+  --font-size-unique: 14px;
 }
 
 .btn-unique:after, .btn-unique:before {
@@ -372,7 +372,7 @@ body {
 .number-unique {
   background: var(--shadow-primary-unique);
   color: #323232;
-  font-size: 5.5px;
+  font-size: 7px;
   font-weight: 700;
   letter-spacing: 1px;
   position: absolute;
