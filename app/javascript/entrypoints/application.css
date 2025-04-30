@@ -188,9 +188,9 @@ body {
 }
 
 .btn-unique {
-  --primary-unique: #ff184c;
-  --shadow-primary-unique: #fded00;
-  --color-unique: white;
+  --primary-unique: #00ccff;
+  --shadow-primary-unique: #ff00aa;
+  --color-unique: black;
   --font-size-unique: 14px;
   --shadow-primary-hue-unique: 180;
   --shadow-secondary-hue-unique: 60;
@@ -219,12 +219,12 @@ body {
 }
 
 .input-unique:checked + .btn-unique {
-  --primary-unique: #8B00FF;
-  --shadow-primary-unique: #00e572;
+  --primary-unique: #ffdd00;
+  --shadow-primary-unique: #00ffcc;
 }
 
 .input-unique:hover + .btn-unique {
-  --primary-unique: #cc133c;
+  --primary-unique: #ff3399;
   --font-size-unique: 14px;
 }
 
@@ -267,7 +267,7 @@ body {
   right: calc(var(--border-unique) * -1);
   bottom: calc(var(--border-unique) * -1);
   background: var(--shadow-primary-unique);
-  text-shadow: 2px 2px var(--shadow-primary-unique), -2px -2px var(--shadow-secondary-unique);
+  text-shadow: 2px 2px var(--shadow-primary-hue-unique), -2px -2px #00ffff;
   clip-path: var(--clip-unique);
   animation: glitch-unique 2s infinite;
   display: none;
