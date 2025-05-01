@@ -164,6 +164,59 @@ body {
   transform: scale(1.03);
 }
 
+.btn-primary {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color: #111;
+  color: #ff0055;
+  border: 2px solid #ff0055;
+  padding: 6px 18px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.btn-primary:focus {
+  border-color: #ff0055 !important;
+}
+
+.btn-primary:hover {
+  background-color: #ff0055;
+  color: #111;
+  border-radius: 8px;
+  border-color: #ff0055 !important;
+}
+
+.btn-secondary {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 13px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  background-color: #111;
+  color: #ff0055;
+  border: 2px solid #ff0055;
+  padding: 6px 18px;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:focus {
+  border-color: #ff0055 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #ff0055;
+  color: #111;
+  border-radius: 8px;
+  border-color: #ff0055 !important;
+}
+
 .container-unique {
   display: flex;
   flex-direction: row;
