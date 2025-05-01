@@ -33,6 +33,12 @@ body {
   cursor: pointer;
 }
 
+.game-image {
+}
+
+.game-image:hover {
+}
+
 .game-category-card:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(216, 48, 48, 0.8);
