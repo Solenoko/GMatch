@@ -34,9 +34,11 @@ body {
 }
 
 .game-image {
+  filter: brightness(50%);
 }
 
 .game-image:hover {
+  filter: brightness(100%);
 }
 
 .game-category-card:hover {
