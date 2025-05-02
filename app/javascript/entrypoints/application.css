@@ -17,6 +17,7 @@ body {
 }
 
 .game-category-card {
+  margin: 5px;
   width: 200px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -47,7 +48,12 @@ body {
   filter: brightness(100%);
 }
 
+.game-image.selected {
+  filter: brightness(100%);
+}
+
 .game-category-card:hover {
+  margin: 5px;
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(216, 48, 48, 0.8);
   border-color: #d83030;
