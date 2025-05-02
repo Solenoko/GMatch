@@ -9,13 +9,16 @@
         <div class="card game-category-card text-center"
           data-controller="expand-card"
           data-action="click->expand-card#toggle">
+
           <div class="card-body">
-            <div class="game-image">
-              <img src="https://res.cloudinary.com/dqrvcexoy/image/upload/<%= game.cloudinary_public_id %>.jpg" alt="<%= game.title %> Image" class="img-fluid">
-            </div>
+            <!-- Moved the class game-image directly to the img tag -->
+            <img src="https://res.cloudinary.com/dqrvcexoy/image/upload/<%= game.cloudinary_public_id %>.jpg"
+                alt="<%= game.title %> Image"
+                class="img-fluid game-image">
 
             <h5 class="card-title"><%= game.title %></h5>
             <p class="card-text text-white mb-1"><strong>Genre:</strong> <%= game.genre %></p>
+
             <div class="card-text text-white" data-controller="read-more">
               <span data-read-more-target="short">
                 <%= truncate(game.description, length: 50, separator: ' ') %>
