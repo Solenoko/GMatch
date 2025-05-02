@@ -241,6 +241,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 10px;
 }
 
 .radio-wrapper-unique {
@@ -261,13 +262,13 @@ body {
 }
 
 .btn-unique {
-  --primary-unique: #00ccff;
-  --shadow-primary-unique: #ff00aa;
-  --color-unique: black;
+  --primary-unique: #111;
+  --shadow-primary-unique: #ff0055;
+  --color-unique: #ff0055;
   --font-size-unique: 14px;
-  --shadow-primary-hue-unique: 180;
-  --shadow-secondary-hue-unique: 60;
-  --shadow-secondary-unique: hsl(var(--shadow-secondary-hue-unique), 90%, 60%);
+  --shadow-primary-hue-unique: 340;
+  --shadow-secondary-hue-unique: 174;
+  --shadow-secondary-unique: hsl(var(--shadow-secondary-hue-unique), 100%, 50%);
   --clip-unique: polygon(11% 0, 95% 0, 100% 25%, 90% 90%, 95% 90%, 85% 90%, 85% 100%, 7% 100%, 0 80%);
   --border-unique: 5px;
   --shimmy-distance-unique: 5;
@@ -278,6 +279,7 @@ body {
   --clip-five-unique: polygon(0 0, 100% 0, 100% 0, 95% 0, 95% 0, 85% 0, 85% 0, 8% 0, 0 0);
   --clip-six-unique: polygon(0 40%, 100% 40%, 100% 85%, 95% 85%, 95% 85%, 85% 85%, 85% 85%, 8% 85%, 0 70%);
   --clip-seven-unique: polygon(0 63%, 100% 63%, 100% 80%, 95% 80%, 95% 80%, 85% 80%, 85% 80%, 8% 80%, 0 70%);
+  background-color: var(--primary-unique);
   color: var(--color-unique);
   text-transform: uppercase;
   font-size: var(--font-size-unique);
@@ -289,16 +291,22 @@ body {
   line-height: 48px;
   text-align: center;
   transition: background 0.2s, 0.3s;
+  font-family: 'Orbitron', sans-serif;
+  border: 2px solid var(--shadow-primary-unique);
+  box-shadow: 0 0 10px var(--shadow-primary-unique);
+  margin-top: 5px;
 }
 
 .input-unique:checked + .btn-unique {
-  --primary-unique: #ffdd00;
-  --shadow-primary-unique: #00ffcc;
+  --primary-unique: #ff0055;
+  --shadow-primary-unique: #00ffc3;
+  --color-unique: #111;
 }
 
 .input-unique:hover + .btn-unique {
-  --primary-unique: #ff3399;
-  --font-size-unique: 14px;
+  --primary-unique: #ff0055;
+  --color-unique: #111;
+  box-shadow: 0 0 20px #00ffc3;
 }
 
 .btn-unique:after, .btn-unique:before {
@@ -454,4 +462,51 @@ body {
   top: 0;
   left: 81%;
   line-height: 6.2px;
+}
+
+.gaming-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: #121212;
+  border-top: 1px solid #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 -2px 15px rgba(0, 255, 200, 0.2);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.footer-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.footer-btn i {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.footer-btn:hover {
+  color: #00ffc3;
+}
+
+.center-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 1);
 }
