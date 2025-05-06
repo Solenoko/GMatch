@@ -23,59 +23,67 @@
   </head>
 
   <body>
-    <div class="glitch-bar"></div>
+    <div data-controller="toggle">
+      <div data-toggle-target="content" class="toggle-content hidden">
+        <div class="glitch-bar"></div>
 
-    <div class="top-footer-unique">
-      <div class="container-unique">
-        <div class="radio-wrapper-unique">
-          <input class="input-unique" name="btn" id="value-1" type="radio">
-          <div class="btn-unique">
-            <span aria-hidden="">_</span>GAMES
-            <span class="btn__glitch-unique" aria-hidden="">_Ga_Mes</span>
-            <label class="number-unique">r1</label>
-          </div>
-        </div>
-        <div class="radio-wrapper-unique">
-          <input class="input-unique" name="btn" id="value-2" checked="true" type="radio">
-          <div class="btn-unique">
-            _PROFILE<span aria-hidden="">_</span>
-            <span class="btn__glitch-unique" aria-hidden="">_P_R_O_FILE</span>
-            <label class="number-unique">r2</label>
-          </div>
-        </div>
-        <div class="radio-wrapper-unique">
-          <input class="input-unique" name="btn" id="value-3" type="radio">
-          <div class="btn-unique">
-            HELP<span aria-hidden=""></span>
-            <span class="btn__glitch-unique" aria-hidden="">Help_</span>
-            <label class="number-unique">r3</label>
-          </div>
-        </div>
-        <div class="radio-wrapper-unique">
-          <input class="input-unique" name="btn" id="value-4" type="radio">
-          <div class="btn-unique">
-            <span aria-hidden="">_</span>SETTINGS
-            <span class="btn__glitch-unique" aria-hidden="">_Settings</span>
-            <label class="number-unique">r4</label>
-          </div>
-        </div>
-        <div class="radio-wrapper-unique">
-          <input class="input-unique" name="btn" id="value-5" type="radio">
-          <div class="btn-unique">
-            FRIENDS<span aria-hidden="">_</span>
-            <span class="btn__glitch-unique" aria-hidden="">_F_RIEND_S_</span>
-            <label class="number-unique">r5</label>
-          </div>
-        </div>
-        <div class="radio-wrapper-unique">
-          <input class="input-unique" name="btn" id="value-6" type="radio">
-          <div class="btn-unique">
-            MESSAGES<span aria-hidden=""></span>
-            <span class="btn__glitch-unique" aria-hidden="">_Messages_</span>
-            <label class="number-unique">r6</label>
+        <div class="top-footer-unique">
+          <div class="container-unique">
+            <div class="radio-wrapper-unique">
+              <input class="input-unique" name="btn" id="value-1" type="radio">
+              <div class="btn-unique">
+                <span aria-hidden="">_</span>GAMES
+                <span class="btn__glitch-unique" aria-hidden="">_Ga_Mes</span>
+                <label class="number-unique">r1</label>
+              </div>
+            </div>
+            <div class="radio-wrapper-unique">
+              <input class="input-unique" name="btn" id="value-2" checked="true" type="radio">
+              <div class="btn-unique">
+                _PROFILE<span aria-hidden="">_</span>
+                <span class="btn__glitch-unique" aria-hidden="">_P_R_O_FILE</span>
+                <label class="number-unique">r2</label>
+              </div>
+            </div>
+            <div class="radio-wrapper-unique">
+              <input class="input-unique" name="btn" id="value-3" type="radio">
+              <div class="btn-unique">
+                HELP<span aria-hidden=""></span>
+                <span class="btn__glitch-unique" aria-hidden="">Help_</span>
+                <label class="number-unique">r3</label>
+              </div>
+            </div>
+            <div class="radio-wrapper-unique">
+              <input class="input-unique" name="btn" id="value-4" type="radio">
+              <div class="btn-unique">
+                <span aria-hidden="">_</span>SETTINGS
+                <span class="btn__glitch-unique" aria-hidden="">_Settings</span>
+                <label class="number-unique">r4</label>
+              </div>
+            </div>
+            <div class="radio-wrapper-unique">
+              <input class="input-unique" name="btn" id="value-5" type="radio">
+              <div class="btn-unique">
+                FRIENDS<span aria-hidden="">_</span>
+                <span class="btn__glitch-unique" aria-hidden="">_F_RIEND_S_</span>
+                <label class="number-unique">r5</label>
+              </div>
+            </div>
+            <div class="radio-wrapper-unique">
+              <input class="input-unique" name="btn" id="value-6" type="radio">
+              <div class="btn-unique">
+                MESSAGES<span aria-hidden=""></span>
+                <span class="btn__glitch-unique" aria-hidden="">_Messages_</span>
+                <label class="number-unique">r6</label>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <button data-action="click->toggle#toggle" data-toggle-target="button" class="toggle-glitch-btn">
+        <i class="fas fa-chevron-down" data-toggle-target="icon"></i>
+      </button>
     </div>
 
     <%= yield %>
