@@ -14,6 +14,7 @@
 body {
   background-color: #121212;
   color: white;
+  padding-bottom: 100px;
 }
 
 .game-category-card {
@@ -242,6 +243,50 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 10px;
+}
+
+.toggle-content.hidden {
+  display: none;
+}
+
+.toggle-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.toggle-glitch-btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  position: relative;
+}
+
+.toggle-glitch-btn i {
+  font-size: 30px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #ff0055;
+  text-shadow: 0 0 5px #ff0055, 0 0 10px #ff0055, 0 0 15px #ff0055;
+}
+
+.toggle-glitch-btn.clicked i {
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+}
+
+.toggle-glitch-btn i:hover {
+  color: #00ff99;
+  text-shadow: 0 0 5px #00ff99, 0 0 10px #00ff99, 0 0 15px #00ff99;
+}
+
+.toggle-glitch-btn.clicked i:hover {
+  color: #ff0055;
+  text-shadow: 0 0 5px #ff0055, 0 0 10px #ff0055, 0 0 15px #ff0055;
 }
 
 .radio-wrapper-unique {
@@ -509,4 +554,23 @@ body {
 .center-btn:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(0, 255, 200, 1);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0055;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff99;
+  box-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
 }
